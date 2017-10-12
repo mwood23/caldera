@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700" rel="stylesheet">
+		<link rel="manifest" href="/manifest.json">
+
+		<meta name=”description” content="Full-service digital agency">
+
+		<!-- Unfurl! TODO: Switch to production site and test this -->
+		<!-- facebook open graph tags  -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:title" content="Caldera" />
+		<meta property="og:description" content="Full-service digital agency" />
+		<meta property="og:image" content="" />
+
+		<!-- twitter card tags additive with the og: tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:domain" value="<insert domain here>" />
+		<meta name="twitter:title" value="Caldera" />
+		<meta name="twitter:description" value="Full-service digital agency" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" value="<insert domain here>" />
+		<meta name="twitter:label1" value="Give Us a Call At" />
+		<meta name="twitter:data1" value="<phone number>" />
+		<meta name="twitter:label2" value="Or Email" />
+		<meta name="twitter:data2" value="<email>" />
+
+    <noscript>
+      You have Javascript disabled in your web browser. It is required to access this website
+    </noscript>
+
+		<% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
+			<meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
+		<% } %>
+		<% for (var chunk of webpack.chunks) { %>
+		 <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
+			<% for (var file of chunk.files) { %>
+				<% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
+					<link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+				<% } else if (file.match(/manifest\.json$/)) { %>
+					<link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath + file %>">
+				<% } %>
+			<% } %>
+		<% } %>
+
+		<script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-105570803-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+		<%= htmlWebpackPlugin.options.ssr({
+			url: '/'
+		}) %>
+		<script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+	</body>
+</html>
