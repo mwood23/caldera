@@ -110,8 +110,8 @@ export default class Header extends Component {
 					<img src={logoSrc} alt="Caldera Logo" />
 				<nav>
 					<Link onClick={this.viewChange} href="/">Home</Link>
-					<Link onClick={this.viewChange} href="/work">Work</Link>
-					<Link onClick={this.viewChange} href="/careers">Careers</Link>
+					{/* <Link onClick={this.viewChange} href="/work">Work</Link>
+					<Link onClick={this.viewChange} href="/careers">Careers</Link> */}
 					{/* <Link onClick={this.viewChange} href="/ourStory">Our Story</Link> */}
 					<button onClick={this.handleOpenModal}>Contact Us</button>
 				</nav>

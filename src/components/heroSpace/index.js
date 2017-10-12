@@ -1,10 +1,12 @@
 import {h, Component} from 'preact';
 import style from './style';
 import dat from 'dat.gui/build/dat.gui.min.js';
+import TypingCarousel from '../typingCarousel';
 
 export default class HeroSpace extends Component {
 
   // Initialize
+  // https://codepen.io/anon/pen/oGMjBR
   componentDidMount() {
     /**
 		 * requestAnimationFrame
@@ -147,7 +149,7 @@ export default class HeroSpace extends Component {
         s[p] = o[p];
       return s;
     })({
-      gravity: 0.05,
+      gravity: 0.01,
       isMouseOver: false,
       dragging: false,
       destroyed: false,
@@ -442,7 +444,7 @@ export default class HeroSpace extends Component {
     // GUI Control
 
     control = {
-      particleNum: 200
+      particleNum: 150
     };
 
     // Init
@@ -547,6 +549,7 @@ export default class HeroSpace extends Component {
     return (
       <div id="heroSpaceContainer" className={style.heroSpace}>
         <canvas id="c"></canvas>
+        <TypingCarousel></TypingCarousel>
       </div>
     )
 
