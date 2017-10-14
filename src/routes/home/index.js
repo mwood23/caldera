@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
 import style from './style';
 import HeroSpace from '../../components/heroSpace';
+import WhatWeDo from '../../components/whatWeDo';
+import HowWeDoIt from '../../components/howWeDoIt';
 import Heading from '../../components/heading';
 import Section from '../../components/section';
 
@@ -16,14 +18,16 @@ export default class Home extends Component {
 		return (
 			<div className={style.home}>
 				<HeroSpace></HeroSpace>
-				<Heading text={'What we do'}></Heading>
-				<Section>Caldera is a full-service digital agency focused on delivering you bottom line performance gains using all things digital. This includes website design, application development, consutling, contracting, social media, automation, and full-service bounty marketing.</Section>
-				<Heading text={'Who we\'ve worked with'}></Heading>
-				<Section>
-					<div>
-						<Img img={'https://woodsproduce.com/assets/wplogo1.png'} />
-					</div>
-				</Section>
+        {/* <div className={style.logoSection}>
+          <Img img={'https://woodsproduce.com/assets/wplogo1.png'} />
+          <Img style={{filter: 'none'}} img={'https://i.vimeocdn.com/portrait/9885804_300x300'} />
+        </div> */}
+        <Section>
+          <WhatWeDo></WhatWeDo>
+        </Section>
+        <Section>
+          <HowWeDoIt></HowWeDoIt>
+        </Section>
 			</div>
 		);
 	}

@@ -76,7 +76,7 @@ export default class Header extends Component {
 		// https://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard
 		var tempInput = document.createElement("input");
     tempInput.style = "position: absolute; left: -1000px; top: -1000px;";
-		tempInput.value = '<email here>';
+		tempInput.value = 'marcuswood230@gmail.com';
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
@@ -123,12 +123,11 @@ export default class Header extends Component {
 					closeTimeoutMS={300}
 					onRequestClose={this.handleCloseModal}>
 					<Heading text="GIVE US A RING" />
-					<img className={style.close} onClick={this.handleCloseModal} src="../../assets/close.svg" />
+					<img className={style.close} onClick={this.handleCloseModal} src="../../assets/close.png" />
 					<div>
-						<p className={style.copy}>Ready to get started or have questions for us? We look forward to hearing from you! <b>When calling, ask for Marcus.</b></p>
-						<ModalContactItem image={'../../assets/phone.svg'} contactTitle={'Phone (Preferred)'} contactDetail={<a href="tel:+1-888-888-8888">phone</a>} />
-						<ModalContactItem image={'../../assets/mail.svg'} contactTitle={'Email'} contactDetail={<p>email here</p>} copyIcon={copyEmail} />
-						<ModalContactItem image={'../../assets/fax.svg'} contactTitle={'Fax'} contactDetail={<p>phone</p>} />
+						<p className={style.copy}> We'd love to hear from you! <b>When calling, ask for Marcus.</b></p>
+						<ModalContactItem image={'../../assets/phone.png'} contactTitle={'Phone (Preferred)'} contactDetail={<a href="tel:+1-276-952-8365">276-952-8365</a>} />
+						<ModalContactItem image={'../../assets/mail.png'} contactTitle={'Email'} contactDetail={<p>marcuswood230@gmail.com</p>} copyIcon={copyEmail} />
 					</div>
 				</ReactModal>
 				<Hamburgler open={open} scrolled={scrolled} onClick={this.toggle} />

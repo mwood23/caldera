@@ -1,6 +1,6 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
+  "name": "Caldera",
+  "short_name": "Caldera",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

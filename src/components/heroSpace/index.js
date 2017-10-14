@@ -149,7 +149,7 @@ export default class HeroSpace extends Component {
         s[p] = o[p];
       return s;
     })({
-      gravity: 0.01,
+      gravity: 0.02,
       isMouseOver: false,
       dragging: false,
       destroyed: false,
@@ -330,7 +330,7 @@ export default class HeroSpace extends Component {
     // Configs
 
     var BACKGROUND_COLOR = 'rgba(11, 51, 56, 1)',
-      PARTICLE_RADIUS = 2,
+      PARTICLE_RADIUS = 1,
       G_POINT_RADIUS = 10,
       G_POINT_RADIUS_LIMITS = 65;
 
@@ -390,7 +390,6 @@ export default class HeroSpace extends Component {
     }
 
     function mouseDown(e) {
-			console.log('mouse down', e);
       for (var i = gravities.length - 1; i >= 0; i--) {
         if (gravities[i].isMouseOver) {
           gravities[i].startDrag(mouse);
@@ -444,7 +443,7 @@ export default class HeroSpace extends Component {
     // GUI Control
 
     control = {
-      particleNum: 150
+      particleNum: 50
     };
 
     // Init
@@ -550,6 +549,7 @@ export default class HeroSpace extends Component {
       <div id="heroSpaceContainer" className={style.heroSpace}>
         <canvas id="c"></canvas>
         <TypingCarousel></TypingCarousel>
+        <div className={style.helpText}>Click to add a gravity point.</div>
       </div>
     )
 

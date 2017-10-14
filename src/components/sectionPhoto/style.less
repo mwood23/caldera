@@ -1,0 +1,59 @@
+@import '~style/index';
+
+.sectionPhoto {
+  padding: 1rem;
+  min-height: @section-min-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 100%;
+
+  .copy {
+    width: 100%;
+  }
+
+  @media (max-width: @nav-bar-mobile-breakpoint) {
+    flex-direction: column;
+
+    .photoContainer {
+      order: 1;
+    }
+
+    .contentContainer {
+      order: 2;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  ul {
+    align-self: flex-start;
+  }
+
+  .photoContainer {
+    width: 12rem;
+    height: 12rem;
+    margin: 1rem 3rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      // object-fit: cover;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 60%;
+
+    @media (max-width: @x-small) {
+			width: 100%;
+		}
+  }
+}

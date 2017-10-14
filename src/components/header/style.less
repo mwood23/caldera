@@ -11,6 +11,7 @@
 	z-index: 50;
 	transition: all .25s ease;
   transform: translateZ(0);
+	display: flex;
 
 	&.scrolled {
 		background: white;
@@ -58,7 +59,7 @@
 	img {
 		padding: 0 0 0 1rem;
 		width: 11rem;
-		vertical-align: middle;
+		// vertical-align: middle;
 
 		@media (max-width: @nav-bar-mobile-breakpoint) {
 			padding: 0 0 0 0.5rem;
@@ -266,7 +267,7 @@
 	margin: 0 auto;
 
 	h2 {
-		color: @caldera-green
+		color: @caldera-primary
 	}
 
 	.copy {
