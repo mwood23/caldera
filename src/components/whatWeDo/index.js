@@ -14,13 +14,13 @@ export default class WhatWeDo extends Component {
   render() {
     return (
       <div className={style.whatWeDo}>
-        <Heading text={'WHAT WE DO'}></Heading>
+        <Heading text={'SERVICES'}></Heading>
         <SectionPhoto image={<img src="../../assets/webDevelopment.svg"
           alt="Web Design/Development"
         />} rightAlignedPhoto>
         <h3>Web Design/Development</h3>
         <div>
-          We specialize in web design and development utilizing the newest technologies such as Angular, React/Preact, Node/Express, and Firebase. In addition, we build hybrid mobile applications using Ionic and Progressive Web Apps. By default, we always encrypt our websites with SSL/Https.
+          We specialize in web design and development utilizing the newest technologies such as Angular, React/Preact, Node/Express, and Firebase. In addition, we build mobile applications using Ionic and use the latest Web APIs to create Progressive Web Apps. By default, we always encrypt our websites with SSL/Https.
         </div>
         </SectionPhoto>
         <SectionPhoto image={<img src="../../assets/branding.svg"

@@ -76,7 +76,7 @@ export default class Header extends Component {
 		// https://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard
 		var tempInput = document.createElement("input");
     tempInput.style = "position: absolute; left: -1000px; top: -1000px;";
-		tempInput.value = 'marcuswood230@gmail.com';
+		tempInput.value = 'marcus@calderadigital.com';
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
@@ -109,7 +109,7 @@ export default class Header extends Component {
 			<header className={cx(style.header, open && style.open, scrolled && style.scrolled)}>
 					<img src={logoSrc} alt="Caldera Logo" />
 				<nav>
-					<Link onClick={this.viewChange} href="/">Home</Link>
+					{/* <Link onClick={this.viewChange} href="/">Home</Link> */}
 					{/* <Link onClick={this.viewChange} href="/work">Work</Link>
 					<Link onClick={this.viewChange} href="/careers">Careers</Link> */}
 					{/* <Link onClick={this.viewChange} href="/ourStory">Our Story</Link> */}
@@ -122,15 +122,15 @@ export default class Header extends Component {
 					className={style.modal}
 					closeTimeoutMS={300}
 					onRequestClose={this.handleCloseModal}>
-					<Heading text="GIVE US A RING" />
+					<Heading text="GIVE US A SHOUT" />
 					<img className={style.close} onClick={this.handleCloseModal} src="../../assets/close.png" />
 					<div>
 						<p className={style.copy}> We'd love to hear from you! <b>When calling, ask for Marcus.</b></p>
 						<ModalContactItem image={'../../assets/phone.png'} contactTitle={'Phone (Preferred)'} contactDetail={<a href="tel:+1-276-952-8365">276-952-8365</a>} />
-						<ModalContactItem image={'../../assets/mail.png'} contactTitle={'Email'} contactDetail={<p>marcuswood230@gmail.com</p>} copyIcon={copyEmail} />
+						<ModalContactItem image={'../../assets/mail.png'} contactTitle={'Email'} contactDetail={<p>marcus@calderadigital.com</p>} copyIcon={copyEmail} />
 					</div>
 				</ReactModal>
-				<Hamburgler open={open} scrolled={scrolled} onClick={this.toggle} />
+				{/* <Hamburgler open={open} scrolled={scrolled} onClick={this.toggle} /> */}
 			</header>
 		);
 	}
