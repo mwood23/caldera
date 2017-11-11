@@ -1,4 +1,4 @@
-@import '~style/helpers';
+@import '../../style/helpers';
 
 .howWeDoIt {
 	// https://codepen.io/dylanmcleod/pen/merXXr
@@ -10,7 +10,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 	.boxshadow() {
-		box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 	}
 
 	.btns {
@@ -31,26 +31,26 @@
 		position: relative;
 		padding: 10px 20px 25px;
 		width: 25%;
-    height: 25rem;
+		height: 25rem;
 		background: #111;
 		cursor: pointer;
 		.box-sizing();
 	}
 	/* Button Backgrounds */
 	.btn:nth-child(1) {
-		background: lighten(#68BEC3, 2%);
+		background: lighten(#68bec3, 2%);
 	}
 
 	.btn:nth-child(2) {
-		background: lighten(#68BEC3, 4%);
+		background: lighten(#68bec3, 4%);
 	}
 
 	.btn:nth-child(3) {
-		background: lighten(#68BEC3, 6%);
+		background: lighten(#68bec3, 6%);
 	}
 
 	.btn:nth-child(4) {
-		background: lighten(#68BEC3, 8%);
+		background: lighten(#68bec3, 8%);
 	}
 	/* Arrows */
 	.btn:nth-child(1):after,
@@ -60,19 +60,19 @@
 		top: 45%;
 		right: -18px;
 		z-index: 1;
-		content: "";
+		content: '';
 		border-top: 20px solid transparent;
 		border-bottom: 20px solid transparent;
-		border-left: 20px solid lighten(#68BEC3, 2%);;
+		border-left: 20px solid lighten(#68bec3, 2%);
 		.transition();
 	}
 
 	.btn:nth-child(2):after {
-		border-left: 20px solid lighten(#68BEC3, 4%);;
+		border-left: 20px solid lighten(#68bec3, 4%);
 	}
 
 	.btn:nth-child(3):after {
-		border-left: 20px solid lighten(#68BEC3, 6%);;
+		border-left: 20px solid lighten(#68bec3, 6%);
 	}
 	/* Icon */
 	.btn .icon {
@@ -115,11 +115,11 @@
 	}
 	/* Hover Effects */
 	.btn:hover {
-		background: darken(#68BEC3, 4%);
+		background: darken(#68bec3, 4%);
 	}
 
 	.btn:hover:after {
-		border-left: 20px solid darken(#68BEC3, 4%);
+		border-left: 20px solid darken(#68bec3, 4%);
 	}
 
 	.btn:hover .icon {
@@ -156,7 +156,6 @@
 			border-left: 0;
 		}
 	}
-
 
 	// @media all and (max-width: 950px) and (min-width: 701px) {
 	// 	.btn {
