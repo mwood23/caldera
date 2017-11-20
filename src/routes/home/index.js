@@ -7,6 +7,7 @@ import WorkWithUs from '../../components/workWithUs';
 // import NeedHelp from '../../components/needHelp';
 import Heading from '../../components/heading';
 import Section from '../../components/section';
+import PortfolioSection from '../../components/portfolioSection';
 
 // const Img = ({ img }) => (
 // 	<div className={style.companyLogoContainer}>
@@ -34,16 +35,16 @@ export default class Home extends Component {
           <Img img={'https://woodsproduce.com/assets/wplogo1.png'} />
           <Img style={{filter: 'none'}} img={'https://i.vimeocdn.com/portrait/9885804_300x300'} />
         </div> */}
-				<Section>
+				<Section id="services">
 					<WhatWeDo />
 				</Section>
-				{/* <Section>
-          <HowWeDoIt></HowWeDoIt>
-        </Section> */}
+				<Section id="work">
+					<PortfolioSection />
+				</Section>
 				{/* <Section>
           <NeedHelp></NeedHelp>
         </Section> */}
-				<Section>
+				<Section id="workWithUs">
 					<WorkWithUs />
 				</Section>
 			</div>

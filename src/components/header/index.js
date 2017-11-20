@@ -4,6 +4,14 @@ import style from './style';
 import ReactModal from 'react-modal';
 import Heading from '../heading';
 import ModalContactItem from '../modalContactItem';
+import scrollIntoView from 'scroll-into-view';
+
+const scrollIntoViewOptionsResults = {
+	time: 500,
+	align: {
+		topOffset: 75
+	}
+};
 
 export default class Header extends Component {
 	// This handles opening and closing the hamburger menu on mobile
@@ -83,11 +91,13 @@ export default class Header extends Component {
 		this.setState({ emailCopied: true });
 	};
 
-	viewChange = event => {
-		if (window.location.pathname !== event.target.pathname) {
-			this.setState({ open: false, scrolled: false });
-		}
+	viewChange = (e, section) => {
+		scrollIntoView(
+			document.getElementById(section),
+			scrollIntoViewOptionsResults
+		);
 	};
+
 	componentDidMount() {
 		this._bindScroll();
 	}
@@ -125,10 +135,14 @@ export default class Header extends Component {
 			>
 				<img src={logoSrc} alt="Caldera Logo" />
 				<nav>
-					{/* <Link onClick={this.viewChange} href="/">Home</Link> */}
-					{/* <Link onClick={this.viewChange} href="/work">Work</Link>
-					<Link onClick={this.viewChange} href="/careers">Careers</Link> */}
-					{/* <Link onClick={this.viewChange} href="/ourStory">Our Story</Link> */}
+					<span onClick={e => this.viewChange(e, 'heroSpaceContainer')}>
+						Home
+					</span>
+					<span onClick={e => this.viewChange(e, 'services')}>Services</span>
+					<span onClick={e => this.viewChange(e, 'work')}>Work</span>
+					<span onClick={e => this.viewChange(e, 'workWithUs')}>
+						Work With Us
+					</span>
 					<button onClick={this.handleOpenModal}>Contact Us</button>
 				</nav>
 				<ReactModal
