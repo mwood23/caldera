@@ -10,7 +10,7 @@ const DesktopFrame = props => (
 	<div className={style.video}>
 		<img src={MonitorFrame} />
 		<div>
-			<ReactPlayer url={props.url} width="93%" height="80%" />
+			<ReactPlayer url={props.url} playing width="93%" height="80%" />
 		</div>
 	</div>
 );
@@ -19,7 +19,7 @@ const MobileFrame = props => (
 	<div className={style.mobileVideo}>
 		<img src={PhoneFrame} />
 		<div>
-			<ReactPlayer url={props.url} width="88%" height="80%" />
+			<ReactPlayer url={props.url} playing width="88%" height="80%" />
 		</div>
 	</div>
 );
@@ -66,14 +66,7 @@ export default class PortfolioSection extends Component {
 					mobileVideo="https://streamable.com/k40ln"
 					name="Gamebyrd"
 					about="On-demand video game delivery service"
-					overview="POC for an on-demand video game delivery
-        service focused on retro and new video games. The digital media
-        revolution has upended the brick-and-mortar movie rental companies
-        that also rented video games. This swift change has left gamers
-        with only subscription based services or a limited selection at
-        small kiosks to rent from. Gamebyrd's delivery model bridges the
-        gap between by delivering game rentals to consumers within two
-        hours or less."
+					overview="POC for an on-demand video game delivery service focused on retro and new video games. The digital media revolution has upended the brick-and-mortar movie rental companies that also rented video games. This swift change left gamers with only subscription based services or a limited selection at small kiosks to rent from. Gamebyrd's delivery model bridges the gap by delivering game rentals to consumers within two hours or less."
 					techStack="AngularJS, MongoDB, Node, Express, Digital Ocean, Materialize,
         Angular Material"
 				/>
@@ -81,7 +74,7 @@ export default class PortfolioSection extends Component {
 					mobileVideo="https://streamable.com/lf3s2"
 					name="Friendzone"
 					about="Event based dating for millenials"
-					overview="Friendzone is a dating app that focuses on fostering in person meet ups through events. To start, you must fill out a full profile and in order to be swiped on, create an event. After people have swiped on your event you are then able to choose one person you would like to go out with. This opionated design inihibts the paradox of choice experienced by other apps and encourages singles looking for a relationship to sign up."
+					overview="Friendzone is a dating app that focuses on fostering in person meet ups through events. To start you must fill out a full profile and in order to be swiped on, create an event. After people have swiped on your event you are able to choose one person you would like to go out with. This opinionated design inihibits the paradox of choice experienced by other apps and encourages singles looking for a relationship to sign up."
 					techStack="AngularJS, Ionic, Firebase, Node, Express, Nginx, Digital Ocean, Grunt, HockeyApp, Cordova, Facebook Auth API, Google Maps API"
 				/>
 				<PortfolioItem
