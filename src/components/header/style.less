@@ -41,10 +41,6 @@
 			// overflow: auto;
 			overflow-scrolling: touch;
 
-			// nav {
-			// 	margin-right: 0;
-			// }
-
 			img {
 				filter: none;
 			}
@@ -56,31 +52,33 @@
 		}
 	}
 
-	img {
-		padding: 0 0 0 1rem;
-		width: 11rem;
-		// vertical-align: middle;
+	div {
+		display: flex;
+		align-items: center;
 
-		@media (max-width: @nav-bar-mobile-breakpoint) {
-			padding: 0 0 0 0.5rem;
-			width: 8rem;
-			// margin-top: -15px;
+		img {
+			width: 85%;
+			height: 85%;
+			object-fit: contain;
+
+			@media (max-width: @nav-bar-mobile-breakpoint) {
+				width: 70%;
+				height: 70%;
+			}
 		}
 	}
 
 	nav {
 		position: absolute;
-		display: inline-block;
+		display: flex;
+		align-items: center;
 		right: 1rem;
-		font-size: 20px;
-		// padding-left: 1.5rem;
+		font-size: 18px;
+    text-transform: uppercase;
 		@media (max-width: @nav-bar-mobile-breakpoint) {
 			display: block;
-			position: static;
-			right: initial;
-			// margin-top: @header-height;
-			// padding-left: 0;
-			// margin-right: 100px;
+			right: 0;
+      justify-content: flex-end;
 		}
 
 		span {
@@ -93,15 +91,8 @@
 			background: rgba(255, 255, 255, 0);
 			text-decoration: none;
 			color: #eee;
-			// will-change: background-color;
-			//
-			// &:hover, &:active {
-			// 	background: rgba(255,255,255,0.3);
-			// }
-			//
-			// &.active {
-			// 	background: rgba(255,255,255,0.4);
-			// }
+      cursor: pointer;
+
 			@media (max-width: @nav-bar-mobile-breakpoint) {
 				display: none;
 			}
@@ -110,7 +101,9 @@
 		button {
 			// HACK: Idk why it keeps extending to the height of the parent element
 			// font: icon;
-			font-size: 20px;
+			font-size: 18px;
+      text-transform: uppercase;
+      padding: .25rem;
 
 			margin-left: 0.5rem;
 			transform: inherit;
@@ -121,10 +114,11 @@
 			cursor: pointer;
 
 			@media (max-width: @nav-bar-mobile-breakpoint) {
-				position: absolute;
-				top: 24px;
+        margin-right: 1rem;
+				// position: absolute;
+				// top: 24px;
 				// right: 3.5rem;
-				right: 0.5rem;
+				// right: 0.5rem;
 			}
 		}
 	}

@@ -14,7 +14,7 @@ export default class WhatWeDo extends Component {
 				<SectionPhoto
 					image={
 						<img
-							src="../../assets/webDevelopment.svg"
+							src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=2250&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
 							alt="Web Design/Development"
 						/>
 					}
@@ -32,7 +32,7 @@ export default class WhatWeDo extends Component {
 				<SectionPhoto
 					image={
 						<img
-							src="../../assets/branding.svg"
+							src="https://images.pexels.com/photos/6224/hands-people-woman-working.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"
 							alt="Branding and Content Curation"
 						/>
 					}
@@ -48,7 +48,7 @@ export default class WhatWeDo extends Component {
 				<SectionPhoto
 					image={
 						<img
-							src="../../assets/processAutomation.svg"
+							src="https://images.unsplash.com/photo-1505860421472-7d74e0b4d98a?auto=format&fit=crop&w=934&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
 							alt="Process Automation"
 						/>
 					}

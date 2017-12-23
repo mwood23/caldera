@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
-import dat from 'dat.gui/build/dat.gui.min.js';
 import TypingCarousel from '../typingCarousel';
+import dat from '../../../node_modules/dat.gui/build/dat.gui.min';
 
 export default class HeroSpace extends Component {
 	// Initialize

@@ -122,8 +122,8 @@ export default class Header extends Component {
 		}
 
 		let logoSrc = !this.state.scrolled
-			? '../../assets/calderaWhite.svg'
-			: '../../assets/calderaGreen.svg';
+			? '../../assets/Caldera-WhiteLogo.png'
+			: '../../assets/Caldera-Logo.png';
 
 		return (
 			<header
@@ -133,7 +133,9 @@ export default class Header extends Component {
 					scrolled && style.scrolled
 				)}
 			>
-				<img src={logoSrc} alt="Caldera Logo" />
+				<div>
+					<img src={logoSrc} alt="Caldera Logo" />
+				</div>
 				<nav>
 					<span onClick={e => this.viewChange(e, 'heroSpaceContainer')}>
 						Home

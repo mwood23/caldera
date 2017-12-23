@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import style from './style';
-import 'dat.gui/build/dat.gui.min.js';
 
 export default class TypingCarousel extends Component {
 	// Initialize
